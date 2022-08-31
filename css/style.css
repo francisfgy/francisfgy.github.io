@@ -234,9 +234,13 @@ body {
   #main {
     width: 100%;
     float: none;
-  }
-  #sidebar {
-    width: 100%;
-    float: none;
-  }
+  } 
+}
+::-webkit-scrollbar {
+  overflow: scroll;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: lightgreen;
+  border-radius: 10px;
 }
