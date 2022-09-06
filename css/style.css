@@ -57,9 +57,9 @@ body {
 #showcase {
   background-image: url(../images/cloud.svg);
   background-position: center right;
-  min-height: 700px;
   margin-bottom: 30px;
   border-bottom: 1px solid lightgreen;
+  min-height: 600px;
 }
 .aboutme {
   padding-top: 30px;
@@ -242,21 +242,26 @@ body {
 }
 @media (max-width: 1024px) {
   .aboutme-selfie{
-    max-width: 200px;
+    max-width: 100px;
     width: 100%;
     margin-right: 10%;
+  }
+  #showcase
+  {
+    max-height: 1000px;
   }
 }
 @media (max-width: 768px) {
   .aboutme-name {
     font-size: 36px;
   }
-  .aboutme{
-    display: block;
-  }
+  
   .aboutme-text p{
     
-      
+      font-size: 10px;
+      margin:0 auto 10px;
+      max-width: 70%;
+      width: 100%;
   }
   .projects-wrapper {
     flex-direction: column;
