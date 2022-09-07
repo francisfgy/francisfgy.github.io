@@ -8,14 +8,44 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
-    <form>
-        <input type="text" class="form-formtext" placeholder="Name">
-        <input type="email" class="form-formtext"  placeholder="Email">
-        <input type="text"class="form-formtext"  placeholder="Subject">
-        <textarea class="form-formcontent" rows="5" id="comment" name="text" placeholder="Comment Here"></textarea>
-    </div>
+    <header id="main-header">
+      <div class="header-logo">
+        <img src="./images/toplogo.png" alt="" />
+      </div>
+    </header>
+
+    <nav id="navbar">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="index.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+<div class="contact-container">
+    <form class="form-container">
+        <input type="text" class="form-name" placeholder="Name">
+        <input type="email" class="form-email"  placeholder="Email">
+        <input type="text"class="form-subject"  placeholder="Subject">
+        <textarea style="resize:none" class="form-comment" rows="5" id="comment" name="text" placeholder="Comment Here"></textarea>
+    
     </form>
-    <button type="button">Submit</button>  
+    <button type="button" class="button-submit">Submit</button>  
+</div>
+    <footer id="main-footer">
+        <div id="linkscontainer">
+          <h5 id="linksheader">Links</h5>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <p>Copyright &copy; 2022 Francis Mina</p>
+      </footer>
 </body>
+
 </html>
