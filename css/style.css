@@ -11,7 +11,18 @@ body {
   line-height: 1.6em;
   margin: 0;
 }
-
+.text-green {
+  color: lightgreen;
+}
+::-webkit-scrollbar {
+  overflow: scroll;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: lightgreen;
+  border-radius: 10px;
+}
+/*START HEADER SECTION */
 #main-header {
   background-color: #1c2323;
   min-height: 30px;
@@ -23,7 +34,8 @@ body {
   margin: 0px auto;
   padding-top: 5px;
 }
-
+/*END HEADER SECTION*/
+/*START NAVBAR SECTION */
 #navbar {
   background-color: #1c2323;
   color: #1c2323;
@@ -53,7 +65,8 @@ body {
   text-decoration: underline;
   font-size: 25px;
 }
-
+/*END NAVBAR SECTION */
+/*START SHOWCASE SECTION */
 #showcase {
   background-image: url(../images/cloud.svg);
   background-position: center right;
@@ -61,6 +74,14 @@ body {
   border-bottom: 1px solid lightgreen;
   min-height: 600px;
 }
+#showcase h1 {
+  color: #fff;
+  font-size: 38px;
+  line-height: 1.6em;
+  text-align: center;
+  padding-top: 30px;
+}
+
 .aboutme {
   padding-top: 30px;
   display: flex;
@@ -76,6 +97,41 @@ body {
   border: 5px solid lightgreen;
   max-width: 250px;
   width: 100%;
+  animation: animate-profile-picture 800ms 200ms backwards;
+}
+@keyframes animate-profile-picture {
+  0%{
+    transform: scale(0);
+
+  }
+  80%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes fade-left{
+  0%{
+    opacity: 0;
+    transform: translateX(80px);
+
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-up{
+    0%{
+      opacity: 0;
+      transform: translateY(80px);
+  
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
 }
 .aboutme-text {
   padding-bottom: 100px;
@@ -87,17 +143,36 @@ body {
   float: right;
 }
 
-.aboutme span {
-  color: lightgreen;
-}
+
 .aboutme-text p {
   color: white;
   font-weight: bold;
   line-height: 1.9em;
+  animation: fade-left 650ms 400ms backwards;
 }
 
+.social-icon {
+  color: lightgreen;
+    font-size: 36px;
+    padding: 0 10px;
+    transition: all .3s ease;
+    overflow: visible;
+    box-sizing: content-box;
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    vertical-align: -0.125em;
+}
 
-
+.social-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  animation: fade-up 800ms 600ms backwards;
+}
+.social-container a{
+  text-decoration: none;
+}
+/*END SHOWCASE SECTION */
+/*START ROW and PROJECTS SECTION */
 .row {
   margin: 0 auto;
   max-width: 1000px;
@@ -112,7 +187,6 @@ body {
 .projects-overview-header {
   color: white;
   font-size: 48px;
-  text-decoration: underline;
 }
 .projects-wrapper {
   align-items: center;
@@ -162,37 +236,10 @@ body {
   transform: scale(1.05);
   transition-duration: 500ms;
 }
-.bottomnav ul {
-  list-style: none;
-}
 
-#showcase h1 {
-  color: #fff;
-  font-size: 38px;
-  line-height: 1.6em;
-  text-align: center;
-  padding-top: 30px;
-}
 
-.social-icon {
-  color: lightgreen;
-    font-size: 36px;
-    padding: 0 10px;
-    transition: all .3s ease;
-    overflow: visible;
-    box-sizing: content-box;
-    display: var(--fa-display, inline-block);
-    height: 1em;
-    vertical-align: -0.125em;
-}
-
-.social-container {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-.social-container a{
-  text-decoration: none;
-}
+/*END ROW and PROJECTS SECTION */
+/*START FOOTER SECTION */
 #main-footer {
   background: black;
   color: #fff;
@@ -203,7 +250,9 @@ body {
   align-items: center;
 
 }
-
+#main-footer p {
+  text-transform: uppercase;
+}
 #linkscontainer h5 {
   color: #ffffff;
   font-size: 32px;
@@ -227,17 +276,9 @@ body {
   color: white;
 }
 
-#main-footer p {
-  text-transform: uppercase;
-}
-::-webkit-scrollbar {
-  overflow: scroll;
-  width: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: lightgreen;
-  border-radius: 10px;
-}
+/*END FOOTER SECTION */
+/*START MEDIA RESPONSIVENESS SECTION */
+
 @media (max-width: 1200px) {
   
 }
@@ -263,6 +304,11 @@ body {
       margin:0 auto 10px;
       max-width: 70%;
       width: 100%;
+      
+  }
+  
+  .projects-overview-header{
+    font-size: 30px;
   }
   .projects-wrapper {
     flex-direction: column;
@@ -272,10 +318,10 @@ body {
     flex-direction: column;
   }
   .projects-name {
-    font-size: 32px;
+    font-size: 22px;
   }
   .projects-description {
-    font-size: 16px;
+    font-size: 12px;
   }
   .projects-wrapper-img {
     max-width: 400px;
@@ -289,7 +335,7 @@ body {
   }
 }
 
-/* BEGIN STYLING FOR CONTACT.HTML */
+/*START CONTACT.HTML SECTION*/
 .contact-container{
   min-height: 620px;
   background-image: url(../images/cloud.svg);
@@ -329,3 +375,4 @@ body {
   margin-bottom: 10px;
   
 }
+/*END CONTACT.HTML SECTION */
