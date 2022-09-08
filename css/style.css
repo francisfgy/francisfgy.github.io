@@ -11,6 +11,18 @@ body {
   line-height: 1.6em;
   margin: 0;
 }
+h2{
+  color: #fff;
+  font-size: 36px;
+}
+.section__title{
+  margin-bottom: 20px;
+  text-align: center;
+}
+.container{
+  padding:50px 0;
+  
+}
 .text-green {
   color: lightgreen;
 }
@@ -71,8 +83,7 @@ body {
   background-image: url(../images/cloud.svg);
   background-position: center right;
   margin-bottom: 30px;
-  border-bottom: 1px solid lightgreen;
-  min-height: 600px;
+  min-height: 700px;
 }
 #showcase h1 {
   color: #fff;
@@ -172,6 +183,54 @@ body {
   text-decoration: none;
 }
 /*END SHOWCASE SECTION */
+/* TECH STACK */
+#languages{
+  /*background-color: #333a3a;*/
+  background-color: #242d2d;
+}
+
+.language__img{
+  width: 100%;
+  max-width: 100px;
+  transition: all 300ms ease;
+}
+.language:hover .language__img {
+  filter: brightness(80%);
+  opacity: 0.86;
+  transform: scale(0.9);
+}
+.language__img--wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 16px;
+  
+}
+.language{
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.language__list{
+  display: flex;
+  width:100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.language__name {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  transform: scale(0);
+  transition: all 300ms ease;
+  font-size: 20px;
+  opacity: 0;
+}
+.language:hover .language__name{
+  transform: scale(1);
+  opacity: 1;
+}
 /*START ROW and PROJECTS SECTION */
 .row {
   margin: 0 auto;
@@ -183,10 +242,6 @@ body {
 #projects-overview {
   padding-bottom: 50px;
   padding-top: 50px;
-}
-.projects-overview-header {
-  color: white;
-  font-size: 48px;
 }
 .projects-wrapper {
   align-items: center;
